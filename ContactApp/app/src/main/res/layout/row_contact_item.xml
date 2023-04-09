@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.chauthai.swipereveallayout.SwipeRevealLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/parentLayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorSecondary"
+    app:dragEdge="right"
+    app:mode="same_level">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/contact_image"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:src="@drawable/ic_baseline_person_24"
+            app:civ_border_width="@dimen/_1sdp"
+            app:civ_border_color="@color/colorTextPrimary"
+            android:padding="@dimen/_5sdp"/>
+
+        <TextView
+            android:id="@+id/contact_name"
+            android:layout_width="237dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="65dp"
+            android:layout_toStartOf="@+id/contact_number_dial"
+            android:layout_toEndOf="@+id/contact_image"
+            android:text="Contact Name"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="@dimen/_16sdp" />
+
+        <ImageView
+            android:id="@+id/contact_number_dial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_phone_24"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="@dimen/_10sdp"
+            app:tint="@color/colorTextPrimary" />
+
+
+    </RelativeLayout>
+
+
+
+
+
+</com.chauthai.swipereveallayout.SwipeRevealLayout>

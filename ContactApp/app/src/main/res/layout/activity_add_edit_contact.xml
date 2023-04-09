@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSecondary"
+    tools:context=".AddEditContact">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:padding="@dimen/_10sdp">
+
+<!--        circle image for profile image-->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileIv"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:src="@drawable/ic_baseline_person_24"
+            android:layout_gravity="center"
+            app:civ_border_width="@dimen/_1sdp"
+            app:civ_border_color="@color/colorTextPrimary"/>
+
+<!--         editText for name input-->
+        <EditText
+            android:id="@+id/firstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Firstname"
+            android:inputType="textPersonName"
+            android:textColorHint="@color/white"
+            android:background="@drawable/background_input_field"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:drawableStart="@drawable/ic_baseline_text_fields_24"
+            android:drawablePadding="@dimen/_5sdp"
+            android:textSize="@dimen/_14sdp"
+            android:textColor="@color/colorTextSecondary"/>
+        <EditText
+            android:id="@+id/lastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Lastname"
+            android:inputType="textPersonName"
+            android:textColorHint="@color/white"
+            android:background="@drawable/background_input_field"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:drawableStart="@drawable/ic_baseline_text_fields_24"
+            android:drawablePadding="@dimen/_5sdp"
+            android:textSize="@dimen/_14sdp"
+            android:textColor="@color/colorTextSecondary"/>
+
+<!--        editText for phone input-->
+        <EditText
+            android:id="@+id/phoneEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone"
+            android:inputType="phone"
+            android:textColorHint="@color/white"
+            android:background="@drawable/background_input_field"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:drawableStart="@drawable/ic_baseline_phone_24"
+            android:drawablePadding="@dimen/_5sdp"
+            android:textSize="@dimen/_14sdp"
+            android:textColor="@color/colorTextSecondary"/>
+
+        <!--        editText for email input-->
+        <EditText
+            android:id="@+id/emailEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/white"
+            android:background="@drawable/background_input_field"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:drawableStart="@drawable/ic_baseline_email_24"
+            android:drawablePadding="@dimen/_5sdp"
+            android:textSize="@dimen/_14sdp"
+            android:textColor="@color/colorTextSecondary"/>
+
+        <RadioGroup
+            android:id="@+id/radio_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_10sdp"
+                    android:text="Gender"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textColorHint="@color/white"
+                    android:textSize="@dimen/_14sdp" />
+
+                <RadioButton
+                    android:id="@+id/radio_male"
+                    android:layout_width="99dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="30dp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_10sdp"
+                    android:text="MALE"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textColorHint="@color/white"
+                    android:textSize="@dimen/_14sdp" />
+
+                <RadioButton
+                    android:id="@+id/radio_female"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_10sdp"
+                    android:text="FEMALE"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textColorHint="@color/white"
+                    android:textSize="@dimen/_14sdp" />
+            </LinearLayout>
+
+        </RadioGroup>
+
+
+        <!--        editText for note input-->
+
+    </LinearLayout>
+
+
+
+
+<!--    fab button for add data to database-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/_10sdp"
+        app:backgroundTint="@color/colorTextPrimary"
+        android:src="@drawable/ic_baseline_add_24"
+        app:tint="@color/white"
+        android:elevation="@dimen/_5sdp"
+        app:pressedTranslationZ="@dimen/_10sdp"
+        android:contentDescription="TODO" />
+
+</RelativeLayout>

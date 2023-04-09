@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSecondary"
+    tools:context=".ContactDetails">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/profileIv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:src="@mipmap/ic_launcher"
+            android:scaleType="fitXY"/>
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Jowel Ahmed"
+            android:textColor="@color/colorTextSecondary"
+            android:textStyle="bold"
+            android:textSize="@dimen/_16sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"/>
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:stretchColumns="2">
+
+            <TableRow>
+                <TextView
+                    android:text="Phone"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorTextPrimary"/>
+                <TextView
+                    android:id="@+id/phoneTv"
+                    tools:text="0177000800"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold"
+                    android:padding="@dimen/_5sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:textColor="@color/colorTextSecondary"
+                    />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="Email"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorTextPrimary"/>
+                <TextView
+                    android:id="@+id/emailTv"
+                    tools:text="jowel@gmail.com"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold"
+                    android:padding="@dimen/_5sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:textColor="@color/colorTextSecondary"
+                    />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="Gender"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorTextPrimary"/>
+                <TextView
+                    android:id="@+id/gender"
+                    tools:text="0177000800"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold"
+                    android:padding="@dimen/_5sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:textColor="@color/colorTextSecondary"
+                    />
+            </TableRow>
+
+            <TableRow android:layout_height="77dp">
+
+                <TextView
+                    android:text="Type"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/type"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold"
+                    tools:text="0177000800" />
+
+            </TableRow>
+
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/contact_edit"
+                    android:layout_width="105dp"
+                    android:layout_height="match_parent"
+                    android:background="#2196F3"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginRight="30dp"
+                    android:text="Edit"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/contact_delete"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="match_parent"
+                    android:background="#F44336"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Delete"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold" />
+            </TableRow>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
