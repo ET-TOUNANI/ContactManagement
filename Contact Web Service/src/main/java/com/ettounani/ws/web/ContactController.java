@@ -1,3 +1,4 @@
+//Authors : Abderrahim Ettounani
 package com.ettounani.ws.web;
 
 import com.ettounani.ws.entities.Contact;
@@ -11,31 +12,37 @@ import java.util.List;
 @AllArgsConstructor
 public class ContactController {
     private final IContactRepo contactRepo;
+
     @GetMapping("/")
-    public void redirectall(){
+    public void redirectall() {
 
         System.out.println("hi");
     }
+
     @GetMapping("/contacts")
-    public List<Contact> all(){
+    public List<Contact> all() {
 
         System.out.println("jooo");
         return contactRepo.findAll();
     }
+
     @PostMapping("/contact")
-    Contact newContact(@RequestBody Contact newContact){
+    Contact newContact(@RequestBody Contact newContact) {
         return contactRepo.save(newContact);
     }
+
     @GetMapping("/contacts/{id}")
     Contact one(@PathVariable Long id) {
-        return contactRepo.findById(id).isPresent()?contactRepo.findById(id).get():new Contact();
+        return contactRepo.findById(id).isPresent() ? contactRepo.findById(id).get() : new Contact();
     }
+
     @DeleteMapping("/deleteContacts/{id}")
     void deleteContact(@PathVariable Long id) {
 
-        System.out.println("delete"+id);
+        System.out.println("delete" + id);
         contactRepo.deleteById(id);
     }
+
     @PutMapping("/contacts/{id}")
     Contact updateContact(@RequestBody Contact contact, @PathVariable Long id) {
         return contactRepo.findById(id)
