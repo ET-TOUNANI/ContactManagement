@@ -13,12 +13,6 @@ import java.util.List;
 public class ContactController {
     private final IContactRepo contactRepo;
 
-    @GetMapping("/")
-    public void redirectall() {
-
-        System.out.println("hi");
-    }
-
     @GetMapping("/contacts")
     public List<Contact> all() {
 
