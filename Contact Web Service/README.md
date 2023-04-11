@@ -73,4 +73,4 @@ To use the API, follow these steps:
 
 ## Author
 
-This file was written by Abderrahim Ettounani.
+This file was written by Abderrahmane Ettounani.
