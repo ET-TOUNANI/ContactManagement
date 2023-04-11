@@ -53,9 +53,6 @@ Updates the contact with the given `id` with the provided details.
 
 Deletes the contact with the given `id` from the repository.
 
-### 6. GET `/`
-
-Redirects to the root URL.
 
 ## Usage
 
